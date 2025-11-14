@@ -1,0 +1,17 @@
+COMANDOS DO XAMPP
+informações
+.serviços
+.onde esta
+.credenciais
+
+1_#mysql
+ -mysql -h localhost -u root -p
+(-h) pra mostrar 
+(localhost) meu local
+(-u) de usuario
+(root) é padrao "apagar e criar outro"
+(-p)password
+(;) terminar os comandos com ;
+(SHOW DATABASES) mostra os bancos criados 
+(CREATE DATABASE) cria um novo banco, iniciando com (db)
+(USE) seleciona o banco que eu desejo selecionar 
