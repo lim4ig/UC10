@@ -1,17 +1,155 @@
-COMANDOS DO XAMPP
-informações
-.serviços
-.onde esta
-.credenciais
+COMANDOS - AULA BANCO DE DADOS
+ 
+- Serviço ?
+ 
+         # mysql
+ 
+- onde está ?
+ 
+          -h (leio junto com localhost)
+ 
+**para mostrar que é o host**
+ 
+- Endereço ?
+ 
+          localhost
+ 
+**digo que é minha prórpria maquina**
+ 
+- Credenciais
+ 
+          -u
+ 
+**De usuario que vou usar**
+ 
+          root
+ 
+**Padrão, apagar depois de criar outro**
+ 
+          -p
+ 
+**Passaword (senha)**
+ 
+Depois de "mariaDB none" inserir os seguintes comandos:
+ 
+           SHOW DATABASES;
+ 
+**sempre em letras maiusculas, "DATABASES" SE REFERE A VARIAS TABELAS**
+ 
+ 
+- Comando abaixo mostra como ver as tabelas criadas dentro do banco de dados.
+ 
+            SHOW TABLES;
+ 
+ 
+- O ultimo é em minusculo com o nome que vou dar para a minha tabela (PARA CRIAR)
+ 
+      CREATE DATABASE db_escola;
+ 
+ 
+- Comando, serve para usar uma tabela já existente
+ 
+       USE + (nome da tabela);
+ 
+ 
+- Comando, serve para criar uma nova tabela
+ 
+     CREATE TABLE + (nome da tabela)
+ 
+***SEM PONTO E VIRGULA NO FINAL***
+ 
+ 
+ 
+- Comando, serve para visualizar a estrutura da tabela criada
+ 
+      DESC + (nome da tabela);
+ 
+ 
+- Comando, serve para visualizar as informações inseridas na tabela.
+ 
+    SELECT * FROM + (nome da tabela);
+ 
+ 
+- Comando, serve para visualizar uma unica coluna da tabela
+ 
+     SELECT + (coluna) FROM + (nome da tabela);
+ 
+ 
+ 
+- Comando, serve para inserir informações na tabela e o "into" para dizer aonde é que estou inserindo.
+ 
+     INSERT INTO + nome da tabela + (aonde será inserido)
+     -> VALUE ("", "","");
+ 
+**quando é comando pode dar apenas enter para ir na linha debaixo, sem a necessidade de usar virgula ou ponto e virgula**
+ 
+ 
+- Comando, serve para inserir valor na tabela como nome, idade e etc.
+ 
+     VALUE + ("nome", idade);
+ 
+ 
+ 
+- Comando, serve para filtrar o nome.
+ 
+    SELECT * FROM tb_alunos WHERE nome LIKE 'h%';
+ 
+ 
+- Comando, serve para filtrar a idade.
+ 
+    SELECT * FROM + nome da tabela WHERE + situação <18;
+ 
+ 
+- Comando, serve para filtrar um nome especifico.
+ 
+    SELECT * FROM + nome da tabela  WHERE nome <> "Paulo Santos";
+ 
+ 
+- Comando para apagar item errado da tabela
+ 
+    DELECT FROM + nome da tabela;
+ 
+**ESSE COMANDO APAGA A TABELA TODA, sempre usar o comando WHERE junto.
+ 
+ 
+- Comando para apagar somente a linha selecionada da tabela
+ 
+     DELECT FROM + nome da tabela WHERE + categoria = "nome da linha";
+ 
+**EM CASO DE DUPLICIDADE AS 2 LINHAS SERÁ APAGADA, é necessario um ID**
+ 
+ 
+- Comando apaga a tabela por completo
+ 
+       DROP + nome da tabela
+ 
+ 
+- Comando servi para inserir varios valores de uma única vez
+ 
+        VALUES
+ 
+  	('', '', '', '', ''),
+	('', '', '', '', ''),
 
-1_#mysql
- -mysql -h localhost -u root -p
-(-h) pra mostrar 
-(localhost) meu local
-(-u) de usuario
-(root) é padrao "apagar e criar outro"
-(-p)password
-(;) terminar os comandos com ;
-(SHOW DATABASES) mostra os bancos criados 
-(CREATE DATABASE) cria um novo banco, iniciando com (db)
-(USE) seleciona o banco que eu desejo selecionar 
+ 
+- Comando para fazer o ID entender que ele deve se preencher automaticamente e ser único.
+ 
+	CREATE TABLE + nome da tabela (
+ 
+		id_ + nome da tabela INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	
+
+	ALTER TABLE "nome da table" ADD COLUMN id INT PRIMARY KEY AUTO_INCREMENT NOT NULL;
+
+	SET e ultilizado para selecionar onde vc quer colocar seus dados 
+
+	UPDATE e ultilizado para atualizar os dados
+
+	WHERE refere-se a condição
+
+	% e usado para procurar algo relevante, que tenha algo antes ou depois
+ de um certo valor
+
+	DROP COLUMN apaga uma certa coluna 
+
+	CHANGE destroi para recriar  alterando o nome e o tipo da coluna
