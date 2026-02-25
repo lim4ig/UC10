@@ -153,3 +153,7 @@ Depois de "mariaDB none" inserir os seguintes comandos:
 	DROP COLUMN apaga uma certa coluna 
 
 	CHANGE destroi para recriar  alterando o nome e o tipo da coluna
+
+	O INNER JOIN no MySQL é uma cláusula usada para combinar linhas de duas ou mais tabelas com base em uma coluna comum entre elas.  Ele retorna apenas os registros onde há correspondência em ambas as tabelas, ou seja, apenas os dados que têm valores coincidentes na coluna de junção. 
+
+	
